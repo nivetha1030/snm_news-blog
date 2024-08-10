@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h2>Login</h2>
+        <form id="username-form"class="design" action="loginn.php" method="post">
+            <label for="Username">Username</label><br>
+            <input type="text" id="username"name="username" placeholder="Username" required><br>
+            <div class="error" id="usernameError"></div>
+            <label for="password">Password</label><br>
+            <input type="password"id="password" name="password" placeholder="Password" required><br>
+            <div class="error" id="passwordError"></div>
+            <button type="submit">Login</button>  <br>
+    
+        <h5>Need an account?</h5>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">SIGN UP</button>
+        </div>
+        </form>
+
+    <div class="form-container">
+        <form id="signupForm"action="sign.php" method="post">
+            <div class="containers">
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                          
+                      <div class="modal-content">
+                          <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h1 class="modal-title">SIGN UP</h1>
+                        </div>
+            <div class="modal-body">
+            <label for="Username">Username</label><br>
+            <input type="text"id="signupusername" name="username" placeholder="Username" required><br>
+            <div class="error" id="signupusernameError"></div>
+            <label for="email">Email</label><br>
+            <input type="email"id="signupemail" name="email" placeholder="Email" required><br>
+            <div class="error" id="signupemailError"></div>
+            <label for="password">Password</label><br>
+            <input type="password"id="signuppassword" name="password" placeholder="Password" required><br>
+            <div class="error" id="signuppasswordError"></div>
+            <label for="password">Confirm Password</label><br>
+            <input type="password" id="signupconfirmpassword"name="confirm_password" placeholder="Confirm Password" required><br>
+            <div class="error" id="signupconfirmpasswordError"></div>
+            <button onclick="showSignupSuccess()">submit</button><br>
+            </div>
+                     </div>
+                    </div>
+              </div>
+            </div>
+        </form>    
+    </div>
+</div>
+<script>
+    function showSignupSuccess() {
+        alert("signup successful!");
+    }
+</script>
+            
+
+ </body>
+</html>
